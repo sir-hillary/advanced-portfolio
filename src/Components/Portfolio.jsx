@@ -24,7 +24,8 @@ const projects = [
         id: 3,
         image: portfolio_3,
         title: "My Portfolio Website",
-        description: "This website you are using right now was built using the HTML, tailwind CSS and react."
+        description: "This website you are using right now was built using the HTML, tailwind CSS and react.",
+        link: "https://sir-hillary.github.io/advanced-portfolio/",
     },
     {
         id: 4,
