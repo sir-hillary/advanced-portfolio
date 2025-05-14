@@ -5,6 +5,7 @@ import { Link } from 'react-scroll';
 import { RiSunFill } from "react-icons/ri";
 import { FaBars, FaMoon, FaTimes } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
+import WhatsappButton from './WhatsappButton';
 
 const Navbar = ({ darkMode, setDarkMode }) => {
 

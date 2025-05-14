@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import emailjs from 'emailjs-com'
+import WhatsappButton from './WhatsappButton';
 
 const Contact = () => {
 
@@ -76,6 +77,7 @@ const Contact = () => {
                     >
                         Send Message
                     </button>
+                    <WhatsappButton />
                 </form>
             </div>
         </section>

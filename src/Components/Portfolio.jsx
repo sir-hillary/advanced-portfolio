@@ -3,7 +3,6 @@ import portfolio_1 from '../assets/portfolio-1.png'
 import portfolio_2 from '../assets/portfolio-2.png'
 import portfolio_3 from '../assets/portfolio-3.png'
 import portfolio_4 from '../assets/portfolio-4.png'
-import Aos from 'aos'
 
 
 const projects = [

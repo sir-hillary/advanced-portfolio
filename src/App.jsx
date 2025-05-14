@@ -6,21 +6,27 @@ import Portfolio from './Components/Portfolio';
 import Skills from './Components/Skills';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
+import WhatsappButton from './Components/WhatsappButton';
 
 const App = () => {
 
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(()=>{
+    const storedMode = localStorage.getItem("darkmode");
+    return storedMode ? JSON.parse(storedMode): false;
+  });
 
   /* this is useeffect for the darkmode */
-  useEffect(() => {
 
-    const root = window.document.documentElement;
+  
+  useEffect(() => {
+    
+    localStorage.setItem('darkmode', JSON.stringify(darkMode))
 
     if (darkMode) {
-      root.classList.add("dark")
+      document.documentElement.classList.add('dark')
     }
     else {
-      root.classList.remove("dark")
+      document.documentElement.classList.remove('dark')
     }
 
   }, [darkMode])
@@ -36,11 +42,17 @@ const App = () => {
 
   }, [])
 
+  const toggleDarkMode = ()=>{
+    setDarkMode(!darkMode);
+  }
+ 
+  
   return (
     <div className=' flex flex-col w-[90%] max-w-screen-xl mx-auto text-gray-900 dark:text-gray-100 min-h-screen overflow-x-hidden transition-colors duration-300 ease-in-out'>
       <div className="w-[90%] max-w-screen-xl mx-auto flex flex-col">
         <div className="mb-4 z-10 relative">
-          <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+          <Navbar darkMode={darkMode} setDarkMode={toggleDarkMode} />
+          <WhatsappButton/>
         </div>
         <main className='flex-grow'>
 
@@ -48,9 +60,7 @@ const App = () => {
           <Portfolio />
           <Skills />
           <Contact />
-
         </main>
-
         <Footer>
           <Footer />
         </Footer>
