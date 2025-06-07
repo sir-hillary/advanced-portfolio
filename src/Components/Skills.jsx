@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaCss3, FaHtml5 } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
+import { SiCanva, SiTailwindcss } from "react-icons/si";
 import { SiJavascript } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { FaFigma } from "react-icons/fa";
@@ -13,7 +13,7 @@ const skills = [
         id: 1,
         name: 'HTML5',
         icon: <FaHtml5 className='text-orange-500 text-4xl' />,
-        level: 95
+        level: 100
     },
     {
         id: 2,
@@ -50,6 +50,12 @@ const skills = [
         name: 'WordPress',
         icon: <FaWordpress className='text-blue-600 text-4xl' />,
         level: 100
+    },
+    {
+        id: 8,
+        name: 'Canva design',
+        icon: <SiCanva className='text-blue-400 text-4xl'/>,
+        level: 85
     },
 ]
 

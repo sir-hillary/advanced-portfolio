@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import logo from '../assets/logo.png';
+import logo from '../assets/myLogo-light.png';
+import logo_dark from '../assets/myLogo-dark.png';
 import contact from '../assets/contact.png'
 import { Link } from 'react-scroll';
 import { RiSunFill } from "react-icons/ri";
@@ -19,7 +20,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         <nav id='home' className='flex justify-between items-center h-20 w-[90%] mx-auto'>
 
             {/* logo */}
-            <Link to='home' smooth={true} duration={500} className='cursor-pointer'><img src={logo} alt="logo" className={`w-12 max-w-full ${ darkMode ? "": "bg-gray-900"}` }/></Link>
+            <Link to='home' smooth={true} duration={500} className='cursor-pointer'>{ darkMode ? <img src={logo_dark} alt="" className='w-20' /> : <img src={logo} className='w-20' alt="" /> }</Link>
 
             {/* Desktop Links */}
             <div className='hidden md:flex gap-6 items-center justify-center'>
@@ -72,8 +73,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                                 Contact Me
                             </button>
                         </Link>
-                        <button onClick={() => { setDarkMode(!darkMode); handleNavToggle(); }} className="text-2xl mt-4">
+                        <button onClick={() => { setDarkMode(!darkMode); handleNavToggle(); }} className="flex items-center bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600 transition-transform transform hover:scale-105">
                             {darkMode ? <RiSunFill className="text-yellow-400" /> : <FaMoon className="text-gray-900" />}
+                            {darkMode ? "Light Modes" : "Dark Mode"}
                         </button>
                     </div>
                 )

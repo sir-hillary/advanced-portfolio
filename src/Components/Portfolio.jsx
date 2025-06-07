@@ -16,8 +16,9 @@ const projects = [
     {
         id: 2,
         image: portfolio_2,
-        title: "A TodoList App",
-        description: "A responsive simple todolist app that captures the todos of the user."
+        title: "Expense-Tracker app",
+        description: "A responsive simple todolist app that captures the todos of the user.",
+        link: "https://sir-hillary.github.io/expense-tracker/"
     },
     {
         id: 3,
@@ -52,7 +53,7 @@ const Portfolio = () => {
                             <div
                                 key={project.id}
                                 onClick={() => openModal(project)}
-                                className='bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300'
+                                className='bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl dark:hover:shadow-gray-700'
                                 data-aos="zoom-in"
                             >
                                 <img src={project.image} alt="" className='w-full h-48 object-cover' />

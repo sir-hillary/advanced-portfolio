@@ -1,16 +1,16 @@
 import React from 'react'
-import logo from '../assets/logo.png'
+import logo from '../assets/myLogo-light.png'
+import logo_dark from '../assets/mylogo-dark.png'
 import { Link } from 'react-scroll'
 
-const Footer = () => {
+const Footer = ({darkmode}) => {
     return (
         <footer className='bg-gray-100 dark:bg-gray-900 py-8'>
             <div className='w-[90%] max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6'>
 
                 {/* Left: Logo and Name */}
                 <div className='flex items-center gap-3'>
-                    <Link to='home' smooth={true} duration={500}><img className='w-12 object-cover' src={logo} alt="" /></Link>
-                    <span className='text-xl font-bold text-yellow-400'>Hillary</span>
+                    <Link to='home' smooth={true} duration={500}>{ darkmode ? <img src={logo} alt='' className='w-20' />: <img src={logo_dark} className='w-20' />}</Link>
                 </div>
 
                 {/* Center: quick Links */}
